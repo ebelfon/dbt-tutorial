@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: customers
+    description: List of all our energy customers
+    columns: 
+      - name: C_CUSTOMER_ID
+        description: primary key of the customers table should be unique
+        tests: 
+          - unique
+          - not_null
+
+  - name: sales
+    columns:
+      - name: SS_CUSTOMER_SK
+        tests:
+          - not_null
